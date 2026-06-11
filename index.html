@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biofert Maroc - Solutions de Nutrition & Protection des Cultures</title>
+  <meta name="description" content="Découvrez les solutions d'agriculture durable, d'agrochimie et de nutrition végétale de Biofert Maroc. Demandez votre devis sur-mesure en ligne.">
+  <link rel="stylesheet" href="style.css?v=19">
+  <!-- Google Fonts for standard and Arabic typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome CDN for clean icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  
+  <div class="app-shell">
+    
+    <!-- Site Header -->
+    <header class="site-header" id="site-header">
+      <div class="nav-container">
+        <a href="#/" class="logo-link">
+          <img src="logo.png" alt="Biofert Logo" class="logo-img">
+        </a>
+        
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <nav class="main-nav" id="main-nav">
+          <a href="#/" class="nav-item" data-route="/"><span data-i18n="nav_home">Accueil</span></a>
+          <a href="#/about" class="nav-item" data-route="/about"><span data-i18n="nav_about">À propos</span></a>
+          <a href="#/departments" class="nav-item" data-route="/departments"><span data-i18n="nav_departments">Nos Départements</span></a>
+          <a href="#/catalog" class="nav-item" data-route="/catalog"><span data-i18n="nav_products">Nos Produits</span></a>
+          <a href="#/events" class="nav-item" data-route="/events"><span data-i18n="nav_events">Événements</span></a>
+          <a href="#/careers" class="nav-item" data-route="/careers"><span data-i18n="nav_careers">Carrières</span></a>
+          
+          <!-- Language Selector -->
+          <div class="lang-selector-container">
+            <button class="btn-lang-toggle" id="lang-menu-btn" aria-label="Select language">
+              <i class="fa-solid fa-globe"></i>
+              <span id="active-lang-label">FR</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="lang-dropdown" id="lang-dropdown">
+              <button class="lang-option" data-lang="fr">FR</button>
+              <button class="lang-option" data-lang="ar">العربية (AR)</button>
+              <button class="lang-option" data-lang="en">EN</button>
+              <button class="lang-option" data-lang="es">ES</button>
+            </div>
+          </div>
+
+          <div class="quote-btn-container">
+            <a href="#/quote" class="btn-quote" data-route="/quote">
+              <i class="fa-solid fa-file-invoice"></i>
+              <span data-i18n="nav_quote">Mon Devis</span>
+              <span class="quote-badge" id="quote-badge">0</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
+    <!-- Main Dynamic Application Container -->
+    <main class="main-content" id="app">
+      <!-- Views will render here dynamically -->
+    </main>
+    
+    <!-- Site Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-info">
+          <h3>Biofert Maroc</h3>
+          <p class="footer-desc" data-i18n="footer_desc">L'alliance de la science et de la nature pour optimiser vos rendements agricoles. Fabricant et distributeur de solutions de nutrition végétale et de protection des cultures de qualité supérieure.</p>
+          <div class="footer-newsletter">
+            <h4 data-i18n="footer_newsletter">Restez informé</h4>
+            <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); alert(store.t('footer_newsletter_success')); this.reset();">
+              <input type="email" placeholder="Votre adresse email" data-i18n="footer_newsletter_placeholder" required>
+              <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4 data-i18n="footer_nav_title">Navigation</h4>
+          <ul class="footer-menu">
+            <li><a href="#/" data-i18n="nav_home">Accueil</a></li>
+            <li><a href="#/about" data-i18n="nav_about">À propos</a></li>
+            <li><a href="#/departments" data-i18n="nav_departments">Nos Départements</a></li>
+            <li><a href="#/catalog" data-i18n="nav_products">Nos Produits</a></li>
+            <li><a href="#/events" data-i18n="nav_events">Événements</a></li>
+            <li><a href="#/careers" data-i18n="nav_careers">Carrières</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4 data-i18n="footer_ranges_title">Nos Gammes</h4>
+          <ul class="footer-menu">
+            <li><a href="#/catalog?cat=nutrition" data-i18n="category_nutrition">Nutrition Végétale</a></li>
+            <li><a href="#/catalog?cat=biostimulants" data-i18n="category_biostimulants">Biostimulants</a></li>
+            <li><a href="#/catalog?cat=protection" data-i18n="category_protection">Protection des Cultures</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4 data-i18n="footer_contact_title">Contactez-nous</h4>
+          <ul class="contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span data-i18n="contact_address">Zone Industrielle, Casablanca, Maroc</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>+212 522 XX XX XX</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>contact@biofert.ma</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Biofert Maroc. <span data-i18n="rights_reserved">Tous droits réservés.</span></p>
+        <p data-i18n="refit_premium">Refonte Premium sur-mesure.</p>
+      </div>
+    </footer>
+    
+  </div>
+
+  <!-- Entry Script (Loads router & components) -->
+  <script type="module" src="router.js"></script>
+</body>
+</html>
